@@ -40,7 +40,7 @@ var regSurname = ['Bianchi', 'Neri', 'Rossi', 'Verdi', 'Gialli'];
 
 // step 1
 var userSurname = prompt('Inserisci il tuo cognome');
-userSurname = userSurname.charAt(0).toUpperCase() + userSurname.slice(1);
+userSurname = userSurname.charAt(0).toUpperCase() + userSurname.slice(1).toLowerCase();
 
 // step 2
 regSurname.push(userSurname);
