@@ -40,10 +40,11 @@ var regSurname = ['Bianchi', 'Neri', 'Rossi', 'Verdi', 'Gialli'];
 
 // step 1
 var userSurname = prompt('Inserisci il tuo cognome');
+userSurname = userSurname.charAt(0).toUpperCase() + userSurname.slice(1);
 
 // step 2
 regSurname.push(userSurname);
-console.log(regSurname);
+// console.log(regSurname);
 
 // step 3
 regSurname.sort();
@@ -52,9 +53,13 @@ regSurname.sort();
 var pos = 0;
 for (var i = 0; i < regSurname.length; i++) {
     if (userSurname == regSurname[i]){
-        pos = i;
+        pos = i + 1;
     }
 }
 
-console.log(pos);
-console.log(regSurname);
+// console.log(pos);
+// console.log(regSurname);
+
+// stampa lista ordinata
+document.getElementById('ordered-list').innerHTML = regSurname;
+document.getElementById('element-pos').innerHTML += pos;
