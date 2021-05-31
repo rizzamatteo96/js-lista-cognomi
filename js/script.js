@@ -45,6 +45,7 @@ userSurname = userSurname.charAt(0).toUpperCase() + userSurname.slice(1);
 // step 2
 regSurname.push(userSurname);
 // console.log(regSurname);
+document.getElementById('unordered-list').innerHTML += regSurname;
 
 // step 3
 regSurname.sort();
@@ -61,5 +62,5 @@ for (var i = 0; i < regSurname.length; i++) {
 // console.log(regSurname);
 
 // stampa lista ordinata
-document.getElementById('ordered-list').innerHTML = regSurname;
+document.getElementById('ordered-list').innerHTML += regSurname;
 document.getElementById('element-pos').innerHTML += pos;
